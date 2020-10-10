@@ -16,8 +16,6 @@ public class BombSpawner : Spawner<Bomb>
 
     protected override void Remove(Bomb bomb)
     {
-        bomb.onRemove -= Remove;
-        
         _listObjects.Remove(bomb);
         bomb.Delete();
     }

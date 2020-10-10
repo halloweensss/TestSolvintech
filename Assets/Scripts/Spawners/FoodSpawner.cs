@@ -18,8 +18,6 @@ public class FoodSpawner : Spawner<Food>
 
     protected override void Remove(Food food)
     {
-        food.onCollected -= Remove;
-        
         _listObjects.Remove(food);
         food.Delete();
     }
